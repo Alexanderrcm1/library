@@ -7,6 +7,15 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+Book.prototype.toggleRead = function() {
+    this.read = !this.read;
+}
+
+function toggleRead(index) {
+    myLibrary[index].toggleRead();
+    updatePage();
+}
+
 let dialog = document.querySelector("#dialog");
 
 let newBookBtn = document.querySelector("#new-book-btn");
@@ -51,7 +60,8 @@ function addBookToLibrary() {
         <div class="card-body>
             <p class="book-pages>pages: ${book.pages}</p>
             <p class="read-status"> ${book.read ? "Read" : "Not Read Yet"}</p>
-            <button class="remove-button" onclick="removeBook(${i})">Remove</button> 
+            <button class="remove-button" onclick="removeBook(${i})">Remove</button>
+            <button class="toggle-read-button" onclick="toggleRead(${i})">Read?</button>
         `
         libraryContainer.appendChild(bookElement);
     }
@@ -62,6 +72,7 @@ function addBookToLibrary() {
     myLibrary.splice(index, 1)
     updatePage();
   }
+
 
 
 
