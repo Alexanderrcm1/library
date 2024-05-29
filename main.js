@@ -1,7 +1,6 @@
 const myLibrary = [];
 
 function newBook() {
-    let book = prompt("Give me a book");
     
 }
 
