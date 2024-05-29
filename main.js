@@ -51,10 +51,16 @@ function addBookToLibrary() {
         <div class="card-body>
             <p class="book-pages>pages: ${book.pages}</p>
             <p class="read-status"> ${book.read ? "Read" : "Not Read Yet"}</p>
+            <button class="remove-button" onclick="removeBook(${i})">Remove</button> 
         `
         libraryContainer.appendChild(bookElement);
     }
 
+  }
+
+  function removeBook(index) {
+    myLibrary.splice(index, 1)
+    updatePage();
   }
 
 
