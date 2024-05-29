@@ -32,6 +32,30 @@ function addBookToLibrary() {
   submitBtn.addEventListener("click", function () {
 
     addBookToLibrary();
+    updatePage();
 
-  })
+  });
+
+  function updatePage() {
+    let libraryContainer = document.querySelector("#library-container");
+    libraryContainer.innerHTML = "";
+    for (let i = 0; i < myLibrary.length; i++) {
+        let book = myLibrary[i];
+        let bookElement = document.createElement("div");
+        bookElement.setAttribute("class", "book-card");
+        bookElement.innerHTML = `
+        <div class="card-header">
+            <h3 class="book-title>${book.title}</h3>
+            <h5 class="book-author>by ${book.author}</h5>
+        </div>
+        <div class="card-body>
+            <p class="book-pages>pages: ${book.pages}</p>
+            <p class="read-status"> ${book.read ? "Read" : "Not Read Yet"}</p>
+        `
+        libraryContainer.appendChild(bookElement);
+    }
+
+  }
+
+
 
