@@ -25,10 +25,10 @@ newBookBtn.addEventListener("click", function() {
 })
 
 function addBookToLibrary() {
-    let title = document.querySelector("#title").value
-    let author = document.querySelector("#author").value
-    let pages = document.querySelector("#pages").value
-    let read = document.querySelector("#read").value
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let pages = document.querySelector("#pages").value;
+    let read = document.querySelector("#read").value;
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
     console.log(newBook);
@@ -54,14 +54,15 @@ function addBookToLibrary() {
         bookElement.setAttribute("class", "book-card");
         bookElement.innerHTML = `
         <div class="card-header">
-            <h3 class="book-title>${book.title}</h3>
-            <h5 class="book-author>by ${book.author}</h5>
+            <h3 class="book-title">${book.title}</h3>
+            <h5 class="book-author">by ${book.author}</h5>
         </div>
         <div class="card-body>
-            <p class="book-pages>pages: ${book.pages}</p>
+            <p class="book-pages">pages: ${book.pages}</p>
             <p class="read-status"> ${book.read ? "Read" : "Not Read Yet"}</p>
             <button class="remove-button" onclick="removeBook(${i})">Remove</button>
             <button class="toggle-read-button" onclick="toggleRead(${i})">Read?</button>
+        </div>
         `
         libraryContainer.appendChild(bookElement);
     }
