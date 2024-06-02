@@ -5,12 +5,12 @@
 
 body {
     font-family: sans-serif;
+    background: linear-gradient(black, rgb(71, 70, 70));
 }
 
 .page-container {
     width: 100vw;
-    height: 100vh;
-    background: linear-gradient(black, rgb(71, 70, 70));
+    min-height: 100vh;
 }
 
 form {
@@ -31,11 +31,30 @@ form {
     color: white;
     font-family: "Pacifico";
     font-size: 30px;
+    padding-bottom: 100px;
 }
 
 #my-library {
     justify-self: start;
     margin-left: 205px;
+}
+
+#library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.book-card {
+    display: flex;
+    color: black;
+    height: 200px;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
 }
 
 #dialog {
@@ -102,17 +121,7 @@ form {
     height: 60px;
 }
 
-.book-card {
-    display: flex;
-    color: black;
-    width: 300px;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 15px;
-}
+
 
 
 
