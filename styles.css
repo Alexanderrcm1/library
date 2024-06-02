@@ -41,20 +41,77 @@ form {
 
 #library-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
     gap: 50px;
+    justify-content: center;
 }
 
 .book-card {
-    display: flex;
+    display: grid;
     color: black;
-    height: 200px;
+    height: 210px;
     max-width: 300px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     background-color: white;
     border-radius: 15px;
+}
+
+.card-header {
+    font-family: "Pacifico";
+    font-size: 30px;
+}
+
+.card-body {
+    font-size: 18px;
+    font-weight: bold;
+    display: grid;
+}
+
+.card-buttons {
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+}
+.remove-button,
+.toggle-read-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    font-family: "Pacifico";
+    color: white;
+    font-size: 18px;
+}
+
+.remove-button {
+    background-color: red;
+}
+
+.remove-button:hover {
+    cursor: pointer;
+}
+
+.toggle-read-button {
+    background-color: blue;
+    margin-left: 20px;
+}
+
+.toggle-read-button:hover {
+    cursor: pointer;
+}
+
+.book-pages {
+    justify-self: center;
+    padding-bottom: 10px;
+}
+
+.read-status {
+    justify-self: center;
 }
 
 #dialog {
@@ -77,11 +134,6 @@ form {
     border: 1px solid blue;
 
 }
-
-#dialog-wrapper {
-
-}
-
 
 #title-wrapper,
 #author-wrapper,
