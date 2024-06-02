@@ -57,9 +57,11 @@ function addBookToLibrary() {
             <h3 class="book-title">${book.title}</h3>
             <h5 class="book-author">by ${book.author}</h5>
         </div>
-        <div class="card-body>
-            <p class="book-pages">pages: ${book.pages}</p>
+        <div class="card-body">
+            <p class="book-pages">${book.pages} pages</p>
             <p class="read-status"> ${book.read ? "Read" : "Not Read Yet"}</p>
+        </div>
+        <div class="card-buttons">
             <button class="remove-button" onclick="removeBook(${i})">Remove</button>
             <button class="toggle-read-button" onclick="toggleRead(${i})">Read?</button>
         </div>
