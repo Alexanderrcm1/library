@@ -55,7 +55,7 @@ function addBookToLibrary() {
         bookElement.innerHTML = `
         <div class="card-header">
             <h3 class="book-title">${book.title}</h3>
-            <h5 class="book-author">by ${book.author}</h5>
+            <h5 class="book-author">${book.author}</h5>
         </div>
         <div class="card-body">
             <p class="book-pages">${book.pages} pages</p>
