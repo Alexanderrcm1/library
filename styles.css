@@ -52,15 +52,17 @@ form {
     height: 210px;
     max-width: 300px;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     background-color: white;
     border-radius: 15px;
 }
 
+
 .card-header {
     font-family: "Pacifico";
     font-size: 30px;
+    justify-self: center;
 }
 
 .card-body {
