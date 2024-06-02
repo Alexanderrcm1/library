@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(black, rgb(71, 70, 70));
+}
+
+form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+    justify-items: start;
+    align-items: center;
+    
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    font-family: "Pacifico";
+    font-size: 30px;
+}
+
+#my-library {
+    justify-self: start;
+    margin-left: 205px;
+}
+
+#dialog {
+    top: 150px;
+    left: 35vw;
+}
+
+#add-book,
+#submit {
+    justify-self: center;
+}
+
+#submit {
+    width: 416px;
+    height: 50px;
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid blue;
+
+}
+
+#dialog-wrapper {
+
+}
+
+
+#title-wrapper,
+#author-wrapper,
+#pages-wrapper,
+#read-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+}
+#title,
+#author,
+#pages,
+#read {
+    width: 250px;
+    height: 3vh;
+    margin-left: 10px;
+}
+
+
+#new-book-btn {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 150px;
+    height: 70px;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: black;
+    font-weight: bold;
+}
+
+#new-book-btn:hover {
+    cursor: pointer;
+    width: 110px;
+    height: 60px;
+}
+
+.book-card {
+    display: flex;
+    color: black;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+
